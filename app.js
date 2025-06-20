@@ -25,6 +25,7 @@ async function fetchForecast() {
     spanCity.innerHTML = cityName;
   } catch (error) {
     console.error(error);
+    window.location.href = "./failed.html";
   }
 }
 
