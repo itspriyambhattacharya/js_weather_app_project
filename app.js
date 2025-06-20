@@ -24,8 +24,11 @@ async function fetchForecast() {
     const cityName = data.name; // fetching city name
     cityH5.innerHTML = cityName;
 
-    const desc = data.weather.main;
-    const detailedDesc = data.weather.description;
+    const desc = data.weather[0].main;
+    const detailedDesc = data.weather[0].description;
+
+    descSpan.innerHTML = desc;
+    detailedDescSpan.innerHTML = detailedDesc;
   } catch (error) {
     console.error(error);
     window.location.href = "./failed.html";
@@ -51,3 +54,5 @@ const minTempSpan = document.querySelector("#min-temp-val"); // min temp span
 const humiditySpan = document.querySelector("#humidity-val"); // humidity span
 const wsSpan = document.querySelector("#wind-speed-val"); // wind speed span
 const flSpan = document.getElementById("fl-val");
+const descSpan = document.querySelector("#desc-val");
+const detailedDescSpan = document.querySelector("#detailed-desc-val");
