@@ -21,8 +21,14 @@ async function fetchForecast() {
     const wind_speed = data.wind.speed; // fetching wind speed
     wsSpan.innerHTML = wind_speed;
 
-    const cityName = data.name; // detching city name
-    spanCity.innerHTML = cityName;
+    const cityName = data.name; // fetching city name
+    cityH5.innerHTML = cityName;
+
+    const desc = data.weather[0].main;
+    const detailedDesc = data.weather[0].description;
+
+    descSpan.innerHTML = desc;
+    detailedDescSpan.innerHTML = detailedDesc;
   } catch (error) {
     console.error(error);
     window.location.href = "./failed.html";
@@ -30,19 +36,23 @@ async function fetchForecast() {
 }
 
 const cityInp = document.getElementById("city-search");
-const cardBody = document.querySelector(".card-body");
+const result = document.querySelector("#weather-display");
 let cityVal = undefined;
 const btn = document.querySelector("#check-weather");
 btn.addEventListener("click", (e) => {
   cityVal = cityInp.value;
-  cardBody.classList.remove("d-none");
+  console.log(cityVal);
+
+  result.classList.remove("d-none");
   fetchForecast();
 });
 
-const spanCity = document.querySelector("#city"); // city span from HTML
+const cityH5 = document.querySelector("#city"); // city span from HTML
 const tempSpan = document.querySelector("#temp-val"); // temparature span from HTML
 const maxTempSpan = document.querySelector("#max-temp-val"); // max temp span
 const minTempSpan = document.querySelector("#min-temp-val"); // min temp span
 const humiditySpan = document.querySelector("#humidity-val"); // humidity span
 const wsSpan = document.querySelector("#wind-speed-val"); // wind speed span
 const flSpan = document.getElementById("fl-val");
+const descSpan = document.querySelector("#desc-val");
+const detailedDescSpan = document.querySelector("#detailed-desc-val");

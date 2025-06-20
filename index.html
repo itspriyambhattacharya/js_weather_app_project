@@ -13,11 +13,11 @@
     <h1 class="text-center mt-5">Weather App</h1>
     <p class="text-center">Enter your city name and check the weather</p>
     <main
-      class="container d-flex justify-content-center align-items-center my-5 py-5"
+      class="container d-flex justify-content-center align-items-center flex-column my-5 py-5"
     >
       <div
         class="card pt-4 mw-100"
-        style="width: 35rem; background-color: #cffffd"
+        style="width: 45rem; background-color: #cffffd"
       >
         <!-- search btn start -->
         <div
@@ -39,39 +39,70 @@
           </div>
         </div>
         <!--  search btn end -->
-        <div
-          class="card-body d-flex flex-column justify-content-around align-items-center d-none"
-        >
-          <h3 class="card-title text-center">City: <span id="city"></span></h3>
-          <div class="row w-100">
-            <div class="col">
-              <h5 class="d-inline-block">Temperature:</h5>
-              <span id="temp-val"></span>°C
-            </div>
-            <div class="col">
-              <h5 class="d-inline-block">Feels like:</h5>
-              <span id="fl-val"></span>°C
-            </div>
-          </div>
-          <div class="row w-100">
-            <div class="col">
-              <h5 class="d-inline-block">Max temperature:</h5>
-              <span id="max-temp-val"></span>°C
-            </div>
-            <div class="col">
-              <h5 class="d-inline-block">Min temperature:</h5>
-              <span id="min-temp-val"></span>°C
-            </div>
-          </div>
+      </div>
 
-          <div class="row w-100">
+      <div
+        class="card mw-100 my-3 d-none"
+        id="weather-display"
+        style="width: 45rem"
+      >
+        <div class="container py-3" id="city-row">
+          <div class="row">
             <div class="col">
-              <h5 class="d-inline-block">Humidity:</h5>
-              <span id="humidity-val"></span>%
+              <!-- row 1 of col 1 -->
+              <div class="row">
+                <div class="col">
+                  <h5 id="city" class="text-center"></h5>
+                </div>
+              </div>
+              <!-- row 2 of col 2 -->
+              <div class="row text-center">
+                <div
+                  class="col d-flex justify-content-around align-items-center flex-column"
+                >
+                  <div>
+                    <h5 class="fs-1"><span id="temp-val"></span>°C</h5>
+                    <span id="max-temp-val"></span>°C<span>/</span
+                    ><span id="min-temp-val"></span>°C
+                  </div>
+                </div>
+                <div
+                  class="col d-flex justify-content-around align-items-center flex-column"
+                >
+                  <p class="fs-5">Feels like: <span id="fl-val"></span>°C</p>
+                </div>
+              </div>
             </div>
+            <!-- Column 1 end -->
             <div class="col">
-              <h5 class="d-inline-block">Wind Speed:</h5>
-              <span id="wind-speed-val"></span>m/s
+              <div class="row">
+                <div class="col">
+                  <h5 id="desc" class="text-center">
+                    <span id="desc-val"></span> -
+                    <span id="detailed-desc-val"></span>
+                  </h5>
+                </div>
+              </div>
+              <!-- row 2 of col 2 -->
+              <div class="row text-center">
+                <div
+                  class="col d-flex justify-content-around align-items-center flex-column"
+                >
+                  <div>
+                    <h5 class="fs-1"><span id="humidity-val"></span>%</h5>
+                    <span>Humidity</span>
+                  </div>
+                </div>
+
+                <div
+                  class="col d-flex justify-content-around align-items-center flex-column"
+                >
+                  <div>
+                    <h5 class="fs-1"><span id="wind-speed-val"></span>m/s</h5>
+                    <span>Wind Speed</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
