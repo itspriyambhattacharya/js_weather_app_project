@@ -1,16 +1,9 @@
 async function fetchForecast() {
-  const url = `https://open-weather13.p.rapidapi.com/city?city=${cityVal}&lang=EN&units=metric`;
-  const options = {
-    method: "GET",
-    headers: {
-      // "x-rapidapi-key": "53918f6a16msh2840c9c7ac4f575p12889ajsn114eb8494792", // ---> main account limit reached
-      "x-rapidapi-key": "db48604ff7msh9d4729cb35c4636p1b4959jsndaeed43e63a4", // ---> using secondary account
-      "x-rapidapi-host": "open-weather13.p.rapidapi.com",
-    },
-  };
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=d7e14dabc50482bba7584de4dd6a1e22`;
 
   try {
-    const response = await fetch(url, options);
+    // const response = await fetch(url, options);
+    const response = await fetch(url);
     const data = await response.json();
     console.log(data);
 
@@ -18,9 +11,9 @@ async function fetchForecast() {
     tempSpan.innerHTML = temp;
     const feels_like_temp = data.main.feels_like; // fetching feels like temparature
     flSpan.innerHTML = feels_like_temp;
-    const max_temp = data.main.max_temp; // fetching max temparature
+    const max_temp = data.main.temp_max; // fetching max temparature
     maxTempSpan.innerHTML = max_temp;
-    const min_temp = data.main.min_temp; // fetching min temparature
+    const min_temp = data.main.temp_min; // fetching min temparature
     minTempSpan.innerHTML = min_temp;
     const humidity = data.main.humidity; // fetching humidity
     humiditySpan.innerHTML = humidity;
