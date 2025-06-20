@@ -39,6 +39,8 @@ const spanCity = document.querySelector("#city"); // city span from HTML
 const tempSpan = document.querySelector("#temp-val"); // temparature span from HTML
 const maxTempSpan = document.querySelector("#max-temp-val"); // max temp span
 const minTempSpan = document.querySelector("#min-temp-val"); // min temp span
+const humiditySpan = document.querySelector("#humidity-val"); // humidity span
+const wsSpan = document.querySelector("#wind-speed-val"); // wind speed span
 
 // Call the function
 // fetchForecast();
