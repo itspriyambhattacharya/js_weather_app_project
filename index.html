@@ -13,7 +13,7 @@
     <h1 class="text-center mt-5">Weather App</h1>
     <p class="text-center">Enter your city name and check the weather</p>
     <main
-      class="container d-flex justify-content-center align-items-center my-5 py-5"
+      class="container d-flex justify-content-center align-items-center flex-column my-5 py-5"
     >
       <div
         class="card pt-4 mw-100"
@@ -39,7 +39,8 @@
           </div>
         </div>
         <!--  search btn end -->
-        <div
+        <!-- card body start -->
+        <!-- <div
           class="card-body d-flex flex-column justify-content-around align-items-center d-none"
         >
           <h3 class="card-title text-center">City: <span id="city"></span></h3>
@@ -73,6 +74,36 @@
               <h5 class="d-inline-block">Wind Speed:</h5>
               <span id="wind-speed-val"></span>m/s
             </div>
+          </div>
+        </div> -->
+        <!-- card body end -->
+      </div>
+
+      <div class="card mw-100" style="width: 35rem">
+        <div class="container" id="city-row">
+          <div class="row">
+            <div class="col">
+              <!-- row 1 of col 1 -->
+              <div class="row">
+                <div class="col">
+                  <h5 id="city-name" class="text-center">Kolkata</h5>
+                </div>
+              </div>
+              <!-- row 2 of col 2 -->
+              <div class="row text-center">
+                <div class="col">
+                  <h5 class="fs-1"><span id="city-temp">34</span>°C</h5>
+                  <span id="max_temp">45</span>°C<span>/</span
+                  ><span id="min_temp">23</span>°C
+                </div>
+                <div class="col">
+                  <p class="fs-5">
+                    Feels like: <span id="city-temp">43</span>°C
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">Col</div>
           </div>
         </div>
       </div>
