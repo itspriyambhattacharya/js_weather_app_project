@@ -21,8 +21,8 @@ async function fetchForecast() {
     const wind_speed = data.wind.speed; // fetching wind speed
     wsSpan.innerHTML = wind_speed;
 
-    const cityName = data.name; // detching city name
-    spanCity.innerHTML = cityName;
+    const cityName = data.name; // fetching city name
+    cityH5.innerHTML = cityName;
   } catch (error) {
     console.error(error);
     window.location.href = "./failed.html";
@@ -37,11 +37,11 @@ btn.addEventListener("click", (e) => {
   cityVal = cityInp.value;
   console.log(cityVal);
 
-  cardBody.classList.remove("d-none");
+  // cardBody.classList.remove("d-none");
   fetchForecast();
 });
 
-const spanCity = document.querySelector("#city"); // city span from HTML
+const cityH5 = document.querySelector("#city"); // city span from HTML
 const tempSpan = document.querySelector("#temp-val"); // temparature span from HTML
 const maxTempSpan = document.querySelector("#max-temp-val"); // max temp span
 const minTempSpan = document.querySelector("#min-temp-val"); // min temp span
