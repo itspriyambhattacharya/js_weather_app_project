@@ -49,3 +49,4 @@ const maxTempSpan = document.querySelector("#max-temp-val"); // max temp span
 const minTempSpan = document.querySelector("#min-temp-val"); // min temp span
 const humiditySpan = document.querySelector("#humidity-val"); // humidity span
 const wsSpan = document.querySelector("#wind-speed-val"); // wind speed span
+const flSpan = document.getElementById("fl-val");
