@@ -15,9 +15,9 @@ async function fetchForecast() {
     console.log(data);
 
     const temp = data.main.temp; // fetching temparature
-    const feels_like_temp = data.main.feels_like;
-    const max_temp = data.main.max_temp;
-    const min_temp = data.main.min_temp;
+    const feels_like_temp = data.main.feels_like; // fetching feels like temparature
+    const max_temp = data.main.max_temp; // fetching max temparature
+    const min_temp = data.main.min_temp; // fetching min temparature
   } catch (error) {
     console.error(error);
   }
