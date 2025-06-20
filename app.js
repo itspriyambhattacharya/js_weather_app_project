@@ -38,6 +38,7 @@ document.querySelector("#check-weather").addEventListener("click", (e) => {
 const spanCity = document.querySelector("#city"); // city span from HTML
 const tempSpan = document.querySelector("#temp-val"); // temparature span from HTML
 const maxTempSpan = document.querySelector("#max-temp-val"); // max temp span
+const minTempSpan = document.querySelector("#min-temp-val"); // min temp span
 
 // Call the function
 // fetchForecast();
