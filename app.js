@@ -1,5 +1,5 @@
 async function fetchForecast() {
-  const url = `https://open-weather13.p.rapidapi.com/city?city=${cityVal}&lang=EN`;
+  const url = `https://open-weather13.p.rapidapi.com/city?city=${cityVal}&lang=EN&units=metric`;
   const options = {
     method: "GET",
     headers: {
