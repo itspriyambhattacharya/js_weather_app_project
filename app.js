@@ -36,14 +36,14 @@ async function fetchForecast() {
 }
 
 const cityInp = document.getElementById("city-search");
-const cardBody = document.querySelector("#weather-display");
+const result = document.querySelector("#weather-display");
 let cityVal = undefined;
 const btn = document.querySelector("#check-weather");
 btn.addEventListener("click", (e) => {
   cityVal = cityInp.value;
   console.log(cityVal);
 
-  // cardBody.classList.remove("d-none");
+  result.classList.remove("d-none");
   fetchForecast();
 });
 
