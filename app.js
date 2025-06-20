@@ -13,7 +13,11 @@ async function fetchForecast() {
     const response = await fetch(url, options);
     const data = await response.json();
     console.log(data);
-    const temp = data.main.temp;
+
+    const temp = data.main.temp; // fetching temparature
+    const feels_like_temp = data.main.feels_like;
+    const max_temp = data.main.max_temp;
+    const min_temp = data.main.min_temp;
   } catch (error) {
     console.error(error);
   }
