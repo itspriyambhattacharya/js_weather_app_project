@@ -23,6 +23,9 @@ async function fetchForecast() {
 
     const cityName = data.name; // fetching city name
     cityH5.innerHTML = cityName;
+
+    const desc = data.weather.main;
+    const detailedDesc = data.weather.description;
   } catch (error) {
     console.error(error);
     window.location.href = "./failed.html";
