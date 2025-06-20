@@ -137,6 +137,6 @@ This project is licensed under the **MIT License** - feel free to use, modify, a
 
 **Priyam Bhattacharya**  
 M.Sc. Computer Science, University of Calcutta  
-[GitHub](https://github.com/itspriyam) | [LinkedIn](https://www.linkedin.com/in/iyspriyambhattacharya)
+[GitHub](https://github.com/itspriyambhattacharya) | [LinkedIn](https://www.linkedin.com/in/itspriyambhattacharya)
 
 ---
