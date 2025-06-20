@@ -79,14 +79,14 @@
         <!-- card body end -->
       </div>
 
-      <div class="card mw-100" style="width: 45rem">
+      <div class="card mw-100" id="weather-display" style="width: 45rem">
         <div class="container" id="city-row">
           <div class="row">
             <div class="col">
               <!-- row 1 of col 1 -->
               <div class="row">
                 <div class="col">
-                  <h5 id="city-name" class="text-center">Kolkata</h5>
+                  <h5 id="city" class="text-center"></h5>
                 </div>
               </div>
               <!-- row 2 of col 2 -->
@@ -95,17 +95,15 @@
                   class="col d-flex justify-content-around align-items-center flex-column"
                 >
                   <div>
-                    <h5 class="fs-1"><span id="city-temp">34</span>°C</h5>
-                    <span id="max_temp">45</span>°C<span>/</span
-                    ><span id="min_temp">23</span>°C
+                    <h5 class="fs-1"><span id="temp-val"></span>°C</h5>
+                    <span id="max-temp-val"></span>°C<span>/</span
+                    ><span id="min-temp-val"></span>°C
                   </div>
                 </div>
                 <div
                   class="col d-flex justify-content-around align-items-center flex-column"
                 >
-                  <p class="fs-5">
-                    Feels like: <span id="city-temp">43</span>°C
-                  </p>
+                  <p class="fs-5">Feels like: <span id="fl-val"></span>°C</p>
                 </div>
               </div>
             </div>
@@ -124,7 +122,7 @@
                   class="col d-flex justify-content-around align-items-center flex-column"
                 >
                   <div>
-                    <h5 class="fs-1"><span id="humidity">84</span>%</h5>
+                    <h5 class="fs-1"><span id="humidity-val">84</span>%</h5>
                     <span>Humidity</span>
                   </div>
                 </div>
@@ -133,7 +131,9 @@
                   class="col d-flex justify-content-around align-items-center flex-column"
                 >
                   <div>
-                    <h5 class="fs-1"><span id="humidity">6.25</span>m/s</h5>
+                    <h5 class="fs-1">
+                      <span id="wind-speed-val">6.25</span>m/s
+                    </h5>
                     <span>Wind Speed</span>
                   </div>
                 </div>
