@@ -20,6 +20,8 @@ async function fetchForecast() {
     const min_temp = data.main.min_temp; // fetching min temparature
 
     const wind_speed = data.wind.speed; // fetching wind speed
+
+    const cityName = data.name; // detching city name
   } catch (error) {
     console.error(error);
   }
