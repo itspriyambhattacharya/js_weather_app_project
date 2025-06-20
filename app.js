@@ -31,7 +31,8 @@ async function fetchForecast() {
 
 const cityInp = document.getElementById("city-search");
 let cityVal = undefined;
-document.querySelector("#check-weather").addEventListener("click", (e) => {
+const btn = document.querySelector("#check-weather");
+btn.addEventListener("click", (e) => {
   cityVal = cityInp.value;
   console.log(cityVal);
   // Call the function
