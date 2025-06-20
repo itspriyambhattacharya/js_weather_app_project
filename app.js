@@ -18,6 +18,8 @@ async function fetchForecast() {
     const feels_like_temp = data.main.feels_like; // fetching feels like temparature
     const max_temp = data.main.max_temp; // fetching max temparature
     const min_temp = data.main.min_temp; // fetching min temparature
+
+    const wind_speed = data.wind.speed; // fetching wind speed
   } catch (error) {
     console.error(error);
   }
