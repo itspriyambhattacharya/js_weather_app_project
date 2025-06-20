@@ -4,7 +4,8 @@ async function fetchForecast() {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "53918f6a16msh2840c9c7ac4f575p12889ajsn114eb8494792",
+      // "x-rapidapi-key": "53918f6a16msh2840c9c7ac4f575p12889ajsn114eb8494792", // ---> main account limit reached
+      "x-rapidapi-key": "db48604ff7msh9d4729cb35c4636p1b4959jsndaeed43e63a4", // ---> using secondary account
       "x-rapidapi-host": "open-weather13.p.rapidapi.com",
     },
   };
