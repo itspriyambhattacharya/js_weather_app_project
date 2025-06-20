@@ -35,5 +35,8 @@ document.querySelector("#check-weather").addEventListener("click", (e) => {
   console.log(cityVal);
 });
 
+const spanCity = document.querySelector("#city");
+const tempSpan = document.querySelector("#temp-val");
+
 // Call the function
 // fetchForecast();
