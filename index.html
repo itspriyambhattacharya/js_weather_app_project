@@ -30,11 +30,27 @@
             <button type="button" class="btn btn-primary">Search</button>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">City: <span id="city"></span></h5>
-          <div class="row">
-            <div class="col">Max Temparature: <span id="max-temp"></span></div>
-            <div class="col">Min Temparature: <span id="min-temp"></span></div>
+        <div
+          class="border border-black card-body d-flex flex-column justify-content-around align-items-center"
+        >
+          <h3 class="card-title text-center">
+            City: <span id="city">Kolkata</span>
+          </h3>
+          <div class="row w-100 border border-warning">
+            <div class="col text-center">
+              <h5 class="d-inline-block">Temperature:</h5>
+              <span id="temp">34</span>
+            </div>
+          </div>
+          <div class="row w-100 border border-warning">
+            <div class="col">
+              <h5 class="d-inline-block">Max Temperature:</h5>
+              <span id="max-temp">23</span>
+            </div>
+            <div class="col">
+              <h5 class="d-inline-block">Min Temperature:</h5>
+              <span id="min-temp">45</span>
+            </div>
           </div>
         </div>
       </div>
