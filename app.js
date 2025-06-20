@@ -13,12 +13,13 @@ async function fetchForecast() {
     const response = await fetch(url, options);
     const data = await response.json();
     console.log(data);
+    const temp = data.main.temp;
   } catch (error) {
     console.error(error);
   }
 }
 
-const cityInp = document.getElementById("city");
+const cityInp = document.getElementById("city-search");
 let cityVal = undefined;
 document.querySelector("#check-weather").addEventListener("click", (e) => {
   cityVal = cityInp.value;
