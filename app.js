@@ -1,6 +1,5 @@
 async function fetchForecast() {
-  const city = "Kolkata";
-  const url = `https://open-weather13.p.rapidapi.com/city?city=${city}&lang=EN`;
+  const url = `https://open-weather13.p.rapidapi.com/city?city=${cityVal}&lang=EN`;
   const options = {
     method: "GET",
     headers: {
@@ -19,5 +18,12 @@ async function fetchForecast() {
   }
 }
 
+const cityInp = document.getElementById("city");
+let cityVal = undefined;
+document.querySelector("#check-weather").addEventListener("click", (e) => {
+  cityVal = cityInp.value;
+  console.log(cityVal);
+});
+
 // Call the function
-fetchForecast();
+// fetchForecast();
